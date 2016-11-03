@@ -15,7 +15,7 @@ def start_osd(filename, text):
 
 	if process:
 		if last_osd != (filename, text):
-			os.killpg(process.pid, signal.SIGTERM)
+			process.kill()
 
 	last_osd = (filename, text)
 	args = [
@@ -36,7 +36,6 @@ def start_osd(filename, text):
 		args,
 		stdout=sys.stdout,
 		stderr=sys.stderr,
-		preexec_fn=os.setsid
 	) 
 
 def file_from_voltage(voltage):
@@ -75,4 +74,4 @@ if __name__ == '__main__':
 		pass
 	finally:
 		if process:
-			os.killpg(process.pid, signal.SIGTERM)
+			process.kill()
