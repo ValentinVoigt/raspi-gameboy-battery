@@ -9,6 +9,7 @@ Group=root
 ExecStart=/root/raspi-gameboy-battery/battery.py
 Restart=always
 RestartSec=5
+ExecStartPre=/bin/sleep 15
 
 [Install]
 WantedBy=multi-user.target
