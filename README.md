@@ -4,7 +4,7 @@ This repository is used on a self-made handheld Raspberry Pi gameboy clone. It u
 
 Clone repository and submodule
 
-    git clone --recurse-submodules
+    git clone --recurse-submodules https://github.com/ValentinVoigt/raspi-gameboy-battery
 
 Build raspidmx for pngview
 
