@@ -19,7 +19,7 @@ def start_osd(filename, text):
 
 	last_osd = (filename, text)
 	args = [
-		"/root/raspidmx/pngview/pngview",
+		"/root/raspi-gameboy-battery/raspidmx/pngview/pngview",
 		"-l", "999999",
 		"-x", "0",
 		"-y", "0",
