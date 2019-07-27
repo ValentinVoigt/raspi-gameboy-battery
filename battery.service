@@ -1,0 +1,14 @@
+[Unit]
+Description=Battery OSD
+After=syslog.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+ExecStart=/root/raspi-gameboy-battery/battery.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
